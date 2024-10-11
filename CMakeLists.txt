@@ -56,11 +56,14 @@ if (UNIX)
     set(CMAKE_CXX_FLAGS_RELEASE "-g -O3 -DNDEBUG")
 
     execute_process(COMMAND "chmod" "+x" "${PROJECT_SOURCE_DIR}/third_party/select_asm.sh")
-    execute_process(COMMAND "chmod" "+x" "${PROJECT_SOURCE_DIR}/third_party/boost.context/bootstrap.sh")
-    execute_process(COMMAND "chmod" "+x" "${PROJECT_SOURCE_DIR}/third_party/boost.context/tools/build/src/engine/build.sh")
-	
+    execute_process(COMMAND "chmod" "+x" "${PROJECT_SOURCE_DIR}/third_party/download_boost.sh")
+
     set(CMAKE_ASM_SOURCE_FILE_EXTENSIONS S)
     message("--> select asm source file, please wait about 5 seconds ...")
+    execute_process(COMMAND "${PROJECT_SOURCE_DIR}/third_party/download_boost.sh" "${PROJECT_SOURCE_DIR}/third_party")
+
+    execute_process(COMMAND "chmod" "+x" "${PROJECT_SOURCE_DIR}/third_party/boost-1.86.0/bootstrap.sh")
+    execute_process(COMMAND "chmod" "+x" "${PROJECT_SOURCE_DIR}/third_party/boost-1.86.0/tools/build/src/engine/build.sh")
     execute_process(COMMAND "${PROJECT_SOURCE_DIR}/third_party/select_asm.sh" "${PROJECT_SOURCE_DIR}" "jump" OUTPUT_VARIABLE jump_asm_file)
     execute_process(COMMAND "${PROJECT_SOURCE_DIR}/third_party/select_asm.sh" "${PROJECT_SOURCE_DIR}" "make" OUTPUT_VARIABLE make_asm_file)
 elseif (WIN32)
