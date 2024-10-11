@@ -7,6 +7,7 @@
 #include <map>
 #include <vector>
 #include <unordered_set>
+#include <memory>
 
 #if defined(__GNUC__)
 #include <cxxabi.h>

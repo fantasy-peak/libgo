@@ -1,8 +1,9 @@
 #include "config.h"
 #include "../context/fcontext.h"
 #include "../scheduler/processer.h"
-#include <string.h>
-#include <stdarg.h>
+
+#include <cstring>
+#include <cstdarg>
 #include <poll.h>
 #if defined(LIBGO_SYS_Unix)
 #include <sys/time.h>

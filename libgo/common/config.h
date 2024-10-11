@@ -1,27 +1,17 @@
 #pragma once
+
 #include "cmake_config.h"
-#include <unordered_map>
-#include <list>
-#include <errno.h>
-#include <string.h>
+
+#include <cerrno>
+#include <cstring>
 #include <cstdlib>
-#include <stdio.h>
 #include <atomic>
 #include <mutex>
-#include <assert.h>
-#include <deque>
+#include <cassert>
 #include <string>
-#include <type_traits>
-#include <stddef.h>
-#include <exception>
-#include <vector>
-#include <set>
-#include <map>
-#include <functional>
-#include <chrono>
-#include <memory>
-#include <queue>
-#include <algorithm>
+
+#include <cstddef>
+
 
 #define LIBGO_DEBUG 0
 #define DEBUG_ROUTINE_SYNC_IN_LIBGO 1

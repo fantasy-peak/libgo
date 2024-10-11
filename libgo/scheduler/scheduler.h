@@ -4,7 +4,6 @@
 #include "../common/spinlock.h"
 #include "../routine_sync/timer.h"
 #include "../task/task.h"
-#include "../debug/listener.h"
 #include "processer.h"
 #include <mutex>
 

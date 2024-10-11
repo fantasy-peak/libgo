@@ -1,5 +1,4 @@
 #pragma once
-#include "../../common/config.h"
 
 #if defined(LIBGO_SYS_FreeBSD)
 #include "reactor.h"

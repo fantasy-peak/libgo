@@ -1,6 +1,9 @@
 #pragma once
+
 #include "config.h"
-#include <string.h>
+
+#include <cstring>
+#include <memory>
 
 namespace co
 {

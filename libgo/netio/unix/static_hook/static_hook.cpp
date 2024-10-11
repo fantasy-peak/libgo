@@ -1,10 +1,11 @@
 #include "../../../common/config.h"
+
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <sys/poll.h>
 #include <sys/time.h>
-#include <stdio.h>
-#include <errno.h>
+#include <cstdio>
+#include <cerrno>
 #if defined(LIBGO_SYS_Linux)
 # include <sys/epoll.h>
 #elif defined(LIBGO_SYS_FreeBSD)

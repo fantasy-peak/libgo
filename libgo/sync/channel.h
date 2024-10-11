@@ -1,5 +1,5 @@
 #pragma once
-#include "../common/config.h"
+
 #include "../common/clock.h"
 # include "../routine_sync/channel.h"
 

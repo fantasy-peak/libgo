@@ -1,4 +1,5 @@
 #include "hook.h"
+
 #include <dlfcn.h>
 #include <fcntl.h>
 #include <sys/select.h>
@@ -7,11 +8,12 @@
 #include <sys/ioctl.h>
 #include <arpa/inet.h>
 #include <netdb.h>
-#include <assert.h>
+#include <cassert>
 #include <chrono>
 #include <map>
-#include <stdarg.h>
+#include <cstdarg>
 #include <poll.h>
+
 #include "../../scheduler/processer.h"
 #include "reactor.h"
 #include "hook_helper.h"

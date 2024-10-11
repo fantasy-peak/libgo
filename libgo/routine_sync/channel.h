@@ -1,9 +1,9 @@
 #pragma once
+
 #include "condition_variable.h"
 #include "timer.h"
+
 #include <deque>
-#include <exception>
-#include <iomanip>
 #include <type_traits>
 
 namespace libgo

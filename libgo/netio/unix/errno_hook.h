@@ -1,9 +1,10 @@
 #pragma once
+
 #include "../../common/config.h"
 
 //#if 0
 #if defined(LIBGO_SYS_Unix)
-#include <errno.h>
+#include <cerrno>
 
 # ifdef errno
 extern "C" volatile int * libgo__errno_location (void) __attribute__((noinline));

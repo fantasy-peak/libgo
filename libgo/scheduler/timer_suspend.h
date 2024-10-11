@@ -1,7 +1,6 @@
 #pragma once
-#include "../common/config.h"
+
 #include "../common/clock.h"
-#include "processer.h"
 
 namespace co
 {

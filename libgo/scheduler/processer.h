@@ -1,4 +1,5 @@
 #pragma once
+
 #include "../common/config.h"
 #include "../common/clock.h"
 #include "../task/task.h"
@@ -8,7 +9,6 @@
 #include "../debug/listener.h"
 #endif
 #include <condition_variable>
-#include <mutex>
 #include <atomic>
 
 namespace co {

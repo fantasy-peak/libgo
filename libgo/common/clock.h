@@ -1,8 +1,10 @@
 #pragma once
-#include <time.h>
+
+#include <ctime>
 #include <chrono>
 #include <thread>
 #include <limits>
+
 #include "spinlock.h"
 
 namespace co

@@ -1,11 +1,8 @@
+#include <cstring>
+
 #include "task.h"
 #include "../common/config.h"
-#include <iostream>
-#include <string.h>
-#include <string>
-#include <algorithm>
 #include "../debug/listener.h"
-#include "../scheduler/scheduler.h"
 #include "../scheduler/ref.h"
 #include "../routine_sync_libgo/libgo_switcher.h"
 

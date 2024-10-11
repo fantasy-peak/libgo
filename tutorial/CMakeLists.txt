@@ -18,7 +18,7 @@ message("  CMAKE_BINARY_DIR: ${CMAKE_BINARY_DIR}")
 message("----------------------------------")
 
 if (UNIX)
-    set(CMAKE_CXX_FLAGS "-std=c++11 -fPIC -Wall -m64 ${CMAKE_CXX_FLAGS}")
+    set(CMAKE_CXX_FLAGS "-std=c++20 -fPIC -Wall -m64 ${CMAKE_CXX_FLAGS}")
     set(CMAKE_CXX_FLAGS_DEBUG "-g ${CMAKE_CXX_FLAGS}")
     set(CMAKE_CXX_FLAGS_RELEASE "-g -O3 ${CMAKE_CXX_FLAGS}")
 elseif (WIN32)

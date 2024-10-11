@@ -1,5 +1,5 @@
 #pragma once
-#include "../../common/config.h"
+
 #include "../../scheduler/processer.h"
 
 namespace co {

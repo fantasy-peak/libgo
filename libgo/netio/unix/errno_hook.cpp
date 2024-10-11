@@ -1,7 +1,7 @@
 #include "errno_hook.h"
 
 #if defined(LIBGO_SYS_Unix)
-#include <stdio.h>
+#include <cstdio>
 
 extern int *__errno_location (void);
 extern "C" volatile int * libgo__errno_location (void)

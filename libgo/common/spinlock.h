@@ -1,6 +1,8 @@
 #pragma once
+
 #include "config.h"
-#include <exception>
+
+#include <stdexcept>
 
 namespace co
 {

@@ -1,5 +1,5 @@
 #pragma once
-#define __const__
+// #define __const__
 #include "common/config.h"
 #include "common/pp.h"
 #include "common/syntax_helper.h"
@@ -57,8 +57,8 @@ using ::co::co_chan;
 using ::co::co_condition_variable;
 
 // co_timer
-typedef ::co::CoTimer co_timer;
-typedef ::co::CoTimer::TimerId co_timer_id;
+using co_timer=::co::CoTimer;
+using co_timer_id=::co::CoTimer::TimerId;
 
 //// co_await
 //#define co_await(type) ::co::__async_wait<type>()-

@@ -1,5 +1,5 @@
 #pragma once
-#include "../common/config.h"
+
 #include "../routine_sync/shared_mutex.h"
 
 namespace co

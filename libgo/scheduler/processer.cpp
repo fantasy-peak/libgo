@@ -2,7 +2,7 @@
 #include "scheduler.h"
 #include "../common/error.h"
 #include "../common/clock.h"
-#include <assert.h>
+#include <cassert>
 #include "ref.h"
 
 namespace co {

@@ -14,7 +14,7 @@ void AsyncCoroutinePool::InitCoroutinePool(size_t maxCoroutineCount)
 void AsyncCoroutinePool::Start(int minThreadNumber, int maxThreadNumber)
 {
     if (!started_.try_lock()) return ;
-    std::thread([=]{ 
+    std::thread([=, this]{
                 scheduler_->Start(minThreadNumber, maxThreadNumber); 
             }).detach();
     if (maxCoroutineCount_ == 0) {

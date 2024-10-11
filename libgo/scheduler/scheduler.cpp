@@ -1,10 +1,9 @@
 #include "scheduler.h"
 #include "../common/error.h"
 #include "../common/clock.h"
-#include <stdio.h>
-#include <system_error>
+#include <cstdio>
 #include <unistd.h>
-#include <time.h>
+#include <ctime>
 #include "ref.h"
 #include <thread>
 

@@ -1,12 +1,13 @@
 #pragma once
+
 #include "config.h"
 #include "spinlock.h"
-#include <string>
+
 #include <vector>
 #include <type_traits>
 #include <mutex>
-#include <assert.h>
-#include <memory>
+#include <cassert>
+#include <stdexcept>
 
 namespace co
 {

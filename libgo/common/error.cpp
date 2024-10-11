@@ -64,7 +64,7 @@ void ThrowError(eCoErrorCode code)
 {
     DebugPrint(dbg_exception, "throw exception %d:%s",
             (int)code, GetCoErrorCategory().message((int)code).c_str());
-    if (std::uncaught_exception()) return ;
+    if (std::uncaught_exceptions()) return ;
     throw std::system_error(MakeCoErrorCode(code));
 }
 
@@ -77,7 +77,7 @@ co_exception::co_exception(std::string const& errMsg)
 void ThrowException(std::string const& errMsg)
 {
     DebugPrint(dbg_exception, "throw co_exception %s", errMsg.c_str());
-    if (std::uncaught_exception()) return ;
+    if (std::uncaught_exceptions()) return ;
     throw co_exception(errMsg);
 }
 

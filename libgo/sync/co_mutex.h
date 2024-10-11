@@ -5,7 +5,7 @@
 namespace co
 {
 
-typedef libgo::Mutex CoMutex;
-typedef CoMutex co_mutex;
+using CoMutex = libgo::Mutex;
+using co_mutex = CoMutex;
 
 } //namespace co

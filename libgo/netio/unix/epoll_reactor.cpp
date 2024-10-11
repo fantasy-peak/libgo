@@ -1,10 +1,9 @@
 #include "epoll_reactor.h"
 #if defined(LIBGO_SYS_Linux)
-#include "reactor_element.h"
 #include "fd_context.h"
 #include "hook_helper.h"
+
 #include <poll.h>
-#include <thread>
 #include <sys/epoll.h>
 
 namespace co {

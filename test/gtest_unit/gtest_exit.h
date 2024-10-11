@@ -1,6 +1,7 @@
 #pragma once
 #include "../../libgo/libgo.h"
 #include <thread>
+#include <list>
 #include "gtest/gtest.h"
 #include <unistd.h>
 #include <sys/socket.h>
