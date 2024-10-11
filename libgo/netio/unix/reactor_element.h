@@ -26,7 +26,7 @@ public:
                 lhs.suspendEntry_ == rhs.suspendEntry_;
         }
     };
-    typedef std::vector<Entry> EntryList;
+    using EntryList = std::vector<Entry>;
 
     explicit ReactorElement(int fd);
 

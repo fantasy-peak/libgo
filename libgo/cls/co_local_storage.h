@@ -11,7 +11,7 @@
 
 namespace co {
 
-typedef int* CLSLocation;
+using CLSLocation = int*;
 
 class CLSMap {
     std::unordered_map<CLSLocation, any> map_;

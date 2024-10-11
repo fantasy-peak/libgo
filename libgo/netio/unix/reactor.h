@@ -15,7 +15,7 @@ public:
     static int GetReactorThreadCount();
 
 public:
-    typedef ReactorElement::Entry Entry;
+    using Entry = ReactorElement::Entry;
 
     Reactor();
 

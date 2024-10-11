@@ -19,10 +19,10 @@ enum class TaskState
 
 const char* GetTaskStateName(TaskState state);
 
-typedef std::function<void()> TaskF;
+using TaskF = std::function<void()>;
 
 struct TaskGroupKey {};
-typedef Anys<TaskGroupKey> TaskAnys;
+using TaskAnys = Anys<TaskGroupKey>;
 
 class Processer;
 

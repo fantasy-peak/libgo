@@ -67,7 +67,7 @@ public:
     // 设置当前协程调试信息, 打印调试信息时将回显
     void SetCurrentTaskDebugInfo(std::string const& info);
 
-    typedef ::libgo::RoutineSyncTimer TimerType;
+    using TimerType = ::libgo::RoutineSyncTimer;
 
 public:
     inline TimerType & GetTimer() { return timer_ ? *timer_ : StaticGetTimer(); }

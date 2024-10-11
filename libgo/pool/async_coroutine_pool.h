@@ -1,4 +1,7 @@
 #pragma once
+
+#include <functional>
+
 #include "../common/config.h"
 #include "../common/spinlock.h"
 #include "../sync/channel.h"
@@ -13,7 +16,7 @@ class AsyncCoroutinePool
 public:
     static AsyncCoroutinePool* Create(size_t maxCallbackPoints = 128);
 
-    typedef std::function<void()> Func;
+    using Func = std::function<void()>;
 
     // 初始化协程数量
     void InitCoroutinePool(size_t maxCoroutineCount);

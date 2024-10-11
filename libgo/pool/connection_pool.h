@@ -11,10 +11,10 @@ template <typename Connection>
 class ConnectionPool
 {
 public:
-    typedef std::shared_ptr<Connection> ConnectionPtr;
-    typedef std::function<Connection*()> Factory;
-    typedef std::function<void(Connection*)> Deleter;
-    typedef std::function<bool(Connection*)> CheckAlive;
+    using ConnectionPtr = std::shared_ptr<Connection>;
+    using Factory = std::function<Connection*()>;
+    using Deleter = std::function<void(Connection*)>;
+    using CheckAlive = std::function<bool(Connection*)>;
 
     // @Factory: 创建连接的工厂
     // @Deleter: 销毁连接, 传递NULL时会使用delete删除连接.

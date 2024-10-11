@@ -25,7 +25,7 @@ static_assert(sizeof(unsigned) == sizeof(MutexInternal),
 struct Mutex : public DebuggerId<Mutex>
 {
 public:
-    typedef Rutex<unsigned> RutexType;
+    using RutexType = Rutex<unsigned>;
 
     Mutex() noexcept {}
     ~Mutex() noexcept {}

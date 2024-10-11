@@ -10,7 +10,7 @@ template <typename K, typename V, uint8_t MaxHeight = 12>
 struct LinkedSkipList
 {
 public:
-    typedef LinkedSkipList<K, V, MaxHeight> this_type;
+    using this_type = LinkedSkipList<K, V, MaxHeight>;
 
     struct Node;
 

@@ -58,7 +58,7 @@ private:
 
 	class Selector
 	{
-		typedef std::unordered_map<SOCKET, std::list<Entry>> Sockets;
+		using Sockets = std::unordered_map<SOCKET, std::list<Entry>>;
 		Sockets readers_;
 		Sockets writers_;
 		Sockets excepters_;
@@ -80,7 +80,7 @@ private:
 		void ThreadRun();
 	};
 
-	typedef std::shared_ptr<Selector> SelectorPtr;
+	using SelectorPtr = std::shared_ptr<Selector>;
 	std::vector<SelectorPtr> selectors_;
 	std::mutex mtx_;    
 };

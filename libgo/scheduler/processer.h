@@ -46,7 +46,7 @@ private:
     volatile uint64_t switchCount_ = 0;
 
     // 协程队列
-    typedef TSQueue<Task, true> TaskQueue;
+    using TaskQueue = TSQueue<Task, true>;
     TaskQueue runnableQueue_;
     TaskQueue waitQueue_;
     TSQueue<Task, false> gcQueue_;

@@ -108,9 +108,9 @@ public:
     }
 };
 
-typedef CoRWMutex co_rwmutex;
-typedef CoRWMutex::ReadView co_rmutex;
-typedef CoRWMutex::WriteView co_wmutex;
+using co_rwmutex = CoRWMutex;
+using co_rmutex = CoRWMutex::ReadView;
+using co_wmutex = CoRWMutex::WriteView;
 
 } //namespace co
 

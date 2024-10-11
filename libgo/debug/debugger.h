@@ -27,8 +27,8 @@ public:
         : public ObjectCounter<T>
     {
     public:
-        typedef DebuggerBase<T> this_type;
-        typedef std::unordered_set<this_type*> DbgMap;
+        using this_type = DebuggerBase<T>;
+        using DbgMap = std::unordered_set<this_type*>;
 
     protected:
         DebuggerBase() {

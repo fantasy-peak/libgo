@@ -135,8 +135,8 @@ public:
     }
 
 private:
-    typedef std::function<RoutineSwitcherI& ()> ClsRefFunction;
-    typedef std::function<bool()> IsInPThreadFunction;
+    using ClsRefFunction = std::function<RoutineSwitcherI& ()>;
+    using IsInPThreadFunction = std::function<bool()>;
 
     static int& refOverlappedLevel() {
         static int lv = -1;

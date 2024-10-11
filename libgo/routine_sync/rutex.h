@@ -181,7 +181,7 @@ template <typename IntValueType = unsigned, bool Reference = false>
 struct Rutex : public IntValue<IntValueType, Reference>, public RutexBase, public DebuggerId<RutexBase>
 {
 public:
-    typedef IntValue<IntValueType, Reference> base_t;
+    using base_t = IntValue<IntValueType, Reference>;
 
     Rutex() noexcept {
         // try {

@@ -32,8 +32,8 @@ public:
         cv_.notify_one();
     }
 
-    typedef std::function<void()> func_type;
-    typedef std::chrono::steady_clock clock_type;
+    using func_type = std::function<void()>;
+    using clock_type = std::chrono::steady_clock;
 
     struct FuncWrapper
     {
@@ -219,14 +219,14 @@ private:
 class RoutineSyncTimer : public RoutineSyncTimerT<std::mutex, std::condition_variable>
 {
 public:
-    typedef RoutineSyncTimerT<std::mutex, std::condition_variable> base_t;
-    typedef base_t::func_type func_type;
-    typedef base_t::clock_type clock_type;
-    typedef base_t::TimerId TimerId;
+    using base_t = RoutineSyncTimerT<std::mutex, std::condition_variable>;
+    using func_type = base_t::func_type;
+    using clock_type = base_t::clock_type;
+    using TimerId = base_t::TimerId;
 
     static RoutineSyncTimer& getInstance() {
-        static RoutineSyncTimer * obj = new RoutineSyncTimer;
-        return *obj;
+        static RoutineSyncTimer obj;
+        return obj;
     }
 
     RoutineSyncTimer() : thread_([this]{ run(); }) {}

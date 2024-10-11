@@ -9,7 +9,7 @@ namespace libgo
 struct ConditionVariable : public DebuggerId<ConditionVariable>
 {
 public:
-    typedef Rutex<unsigned> RutexType;
+    using RutexType = Rutex<unsigned>;
 
     ConditionVariable() noexcept {}
     ~ConditionVariable() noexcept {}

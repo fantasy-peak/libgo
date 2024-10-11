@@ -26,7 +26,7 @@ public:
         FdContextPtr ctx_;
         LFLock lock_;
     };
-    typedef std::shared_ptr<FdSlot> FdSlotPtr;
+    using FdSlotPtr = std::shared_ptr<FdSlot>;
 
     static HookHelper& getInstance();
 
@@ -49,7 +49,7 @@ private:
     void Insert(int fd, FdContextPtr ctx);
 
 private:
-    typedef std::unordered_map<int, FdSlotPtr> Slots;
+    using Slots = std::unordered_map<int, FdSlotPtr>;
     Slots buckets_[kBucketCount+1];
     std::mutex bucketMtx_[kBucketCount+1];
 };

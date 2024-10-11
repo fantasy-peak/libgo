@@ -5,7 +5,7 @@
 namespace co {
 
 class FdContext;
-typedef std::shared_ptr<FdContext> FdContextPtr;
+using FdContextPtr = std::shared_ptr<FdContext>;
 
 enum class eFdType : uint8_t {
     eSocket,
